@@ -28,6 +28,9 @@ public class BaseEntity implements Serializable {
     @Column(name = "CREATED_ON")
     private Date createdOn = new Date(System.currentTimeMillis());
 
+    /**
+     * Time of the last update
+     */
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "UPDATED_ON")
     private Date updatedOn;

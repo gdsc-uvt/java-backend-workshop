@@ -1,12 +1,10 @@
 package com.gdsc.server.entities;
 
+import com.gdsc.server.enums.StoreType;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.List;
 
 /**
@@ -19,9 +17,11 @@ import java.util.List;
 @Table(name = "STORE")
 public class Store extends BaseEntity{
 
+    @Column(name = "NAME")
     private String name;
 
-    private String department;
+    @Column(name = "STORE_TYPE")
+    private StoreType storeType;
 
     @OneToMany
     @JoinColumn(name = "STORE_ID")

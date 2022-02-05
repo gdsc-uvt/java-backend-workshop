@@ -1,11 +1,12 @@
 package com.gdsc.server.entities;
 
-import com.sun.istack.NotNull;
+import com.gdsc.server.enums.UserRole;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.*;
-import java.sql.Date;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
 /**
  * @author : Mihai-Cristian Popescu
@@ -22,4 +23,7 @@ public class User extends BaseEntity{
 
     @Column(name = "PASSWORD")
     private String password;
+
+    @Column(name = "ROLE")
+    private UserRole role;
 }
